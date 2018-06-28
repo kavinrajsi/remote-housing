@@ -50,8 +50,7 @@
 .inner-banner {
     position: relative;
     z-index: 1;
-    height: 100vh;
-    height: 100vh;
+    height: 70vh;
     overflow: hidden;
     display: flex;
     justify-content: flex-end;
@@ -60,7 +59,7 @@
     }
     align-items: center;
     background-repeat: no-repeat;
-    background-position: top center;
+    background-position: top left;
     background-size: cover;
     @media (max-width: 576px) {
         padding: 0px 0px;
