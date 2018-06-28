@@ -1,0 +1,44 @@
+
+/* Colours */
+
+$white: #fff;
+$dark-blue: #2d2f32;
+$sinopia: #d14210;
+$light-black: #333333;
+
+/* Sass MQ Library */
+
+/* http://sass-mq.github.io/sass-mq/ */
+/* Breakpoints */
+
+$mq-breakpoints: (mobile: 320px, mobilesm: 481px, mobilemd: 641px, tablet: 768px, tabletmd: 992px, desktop: 1024px, wide: 1200px, extrawide: 1400px);
+
+/* Displays breakpoints for dev purposes */
+
+$mq-show-breakpoints: mobile, mobilesm, mobilemd, tablet, tabletmd, desktop, wide;
+
+/* primary font */
+$primary-font: "Heebo", sans-serif;
+
+/* reset for button */
+a {
+    &:hover,
+    &:focus {
+        text-decoration: none;
+    }
+}
+
+/* body */
+body {
+    text-rendering: geometricPrecision;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* browserupgrade */
+.browserupgrade {
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0;
+}

@@ -1,0 +1,32 @@
+
+.dontwalkaway {
+    background: $dark-blue;
+    padding-left: 0;
+    padding-right: 0;
+    @include interpolate("padding-top", 600px, 40px, 1200px, 114px, "ease-in");
+    @include interpolate("padding-bottom", 600px, 30px, 1200px, 48px, "ease-in");
+    text-align: center;
+    p {
+        color: $white;
+        font-family: $primary-font;
+        @include interpolate("font-size", 600px, 18px, 1200px, 25px, "ease-in");
+        @include interpolate("line-height", 600px, 36px, 1200px, 42px, "ease-in");
+        @include interpolate("margin-bottom", 600px, 20px, 1200px, 38px, "ease-in");
+        span {
+            border-width: 0 0 8px 0;
+            border-style: dotted;
+            border-color: $sinopia;
+            border-image-source: url('../images/dots.svg');
+            border-image-slice: 33% 33%;
+            border-image-repeat: round;
+        }
+        &.hastag {
+            color: $sinopia;
+            font-weight: 700;
+            @include interpolate("font-size", 600px, 40px, 1200px, 70px, "ease-in");
+            @include interpolate("line-height", 600px, 40px, 1200px, 140px, "ease-in");
+            padding-top: 10px;
+            text-shadow: -7px 7px 30px rgba(0, 0, 0, 0.4);
+        }
+    }
+}

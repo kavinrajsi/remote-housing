@@ -1,0 +1,85 @@
+/* footer */
+.footer {
+    position: relative;
+    background-color: $dark-blue;
+    background: $dark-blue url(../images/footer-bg.png) no-repeat top right;
+    background-blend-mode: overlay;
+    background-size: contain;
+
+    @media (max-width: $screen-xs-max) {
+        padding-bottom: 70px;
+    }
+
+    .footer-container-content {
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        flex-wrap: wrap;
+
+        @media (max-width: $screen-xs-max) {
+            flex-direction: column;
+        }
+
+        @include interpolate("margin-top", 600px, 40px, 1200px, 86px, "ease-in");
+        @include interpolate("margin-bottom", 600px, 40px, 1200px, 50px, "ease-in");
+
+        .items {
+            &:nth-child(1) {
+                @media (max-width: $screen-xs-max) {
+                    margin-right: 0px;
+                    margin-bottom: 20px;
+                }
+
+                @include interpolate("margin-right", 768px, 40px, 1200px, 130px, "ease-in");
+            }
+
+            &:nth-child(2) {
+                @media (max-width: $screen-xs-max) {
+                    margin-right: 0px;
+                    margin-bottom: 20px;
+                }
+                @include interpolate("margin-right", 768px, 40px, 1200px, 104px, "ease-in");
+            }
+
+            ul {
+                margin-bottom: 0px;
+
+                li {
+                    a {
+                         @media (max-width: $screen-xs-max) {
+                            margin-bottom: 12px;
+                            font-size: 16px;
+                        }
+                        font-size: 20px;
+                        line-height: normal;
+                        color: $white;
+                        margin-bottom: 25px;
+                        display: inline-block;
+                    }
+                    &:last-child{
+                        a{
+                            margin-bottom: 0px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .fbar {
+        border-top: 2px solid #4c4c4c;
+        padding: 28px 0;
+
+        .list-inline {
+            margin: 0px;
+
+            a {
+                font-family: $primary-font;
+                font-weight: 400;
+                color: #aaaaaa;
+                font-size: 16px;
+                line-height: normal;
+            }
+        }
+    }
+}

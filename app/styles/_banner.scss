@@ -1,0 +1,89 @@
+/* intro banner */
+
+.intro-banner {
+    position: relative;
+    z-index: 1;
+    height: 100vh;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    align-items: flex-end;
+    padding: 8vw 0px;
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: cover;
+
+    @media (max-width: $screen-sm-max) {
+        padding: 0px 0px 10vh;
+    }
+
+    .intro-banner-content {
+        @media (min-width: $screen-lg-min) {
+            max-width: 68%;
+        }
+
+        h2 {
+            margin: 0px;
+
+            span {
+                display: block;
+
+                @include interpolate("font-size", 600px, 18px, 1200px, 24px, "ease-in");
+                @include interpolate("line-height", 600px, 18px, 1200px, 64px, "ease-in");
+
+                text-transform: lowercase;
+            }
+
+            @include interpolate("font-size", 600px, 40px, 1200px, 80px, "ease-in");
+            @include interpolate("line-height", 600px, 48px, 1200px, 90px, "ease-in");
+
+            font-family: $primary-font;
+            color: $white;
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+    }
+}
+
+/* page  banner */
+
+.inner-banner {
+    position: relative;
+    z-index: 1;
+    height: 100vh;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: flex-end;
+    @media (max-width: 576px) {
+        align-items: flex-end;
+    }
+    align-items: center;
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: cover;
+    @media (max-width: 576px) {
+        padding: 0px 0px;
+    }
+    padding: 8vw 0px;
+
+    .inner-banner-content {
+            background-color: rgba(0,0,0,0.60);
+            @include interpolate("padding-top", 600px, 20px, 1200px, 84px, "ease-in");
+            @include interpolate("padding-bottom", 600px, 20px, 1200px, 84px, "ease-in");
+            @include interpolate("padding-left", 600px, 20px, 1200px, 90px, "ease-in");
+            @include interpolate("padding-right", 600px, 20px, 1200px, 90px, "ease-in");
+            @include interpolate("max-width", 600px, 500px, 1200px, 688px, "ease-in");
+            @media (max-width: 576px) {
+                max-width: 100%;
+            }
+        p{
+            @media (max-width: $screen-sm-max) {
+                font-size: 18px;
+            }
+            color: $white;
+            font-size: 22px;
+            line-height: 1.6;
+        }
+    }
+}
