@@ -1,0 +1,131 @@
+.timeline{
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	position: relative;
+	 &:after{
+		content: "";
+		display: block;
+		width: 10px;
+		height: 100%;
+		background-image: url(../images/dash.svg);
+		position: absolute;
+		top: 10px;
+		left: 10px;
+	 }
+	&-point{
+		position: relative;
+		display: flex;
+		margin-bottom: 35px;
+		/*&:before {*/
+			border-style: dotted;
+			border-color: #d57e00;
+			border-image-source: url(https://cl.ly/3c2J3c0l3r0P/dots.svg);
+			border-image-slice: 33% 33%;
+			border-image-repeat: round;
+			border-width: 0 0 0 13px;
+		/*}*/
+		&:nth-child(n){
+			.timeline-point-dot{
+				border-radius: 50%;
+				background-color: $dot-color;
+				width: 22px;
+				height: 22px;
+				margin-right: 78px;
+				flex: 0 0 22px;
+				max-width: 22px;
+			}
+			.timeline-year{
+				color: #757575;
+				font-family: $primary-font;
+				font-weight: 700;
+				font-size: 20px;
+				line-height: normal;
+				margin-right: 30px;
+			}
+			.timeline-heading{
+				color: #757575;
+				font-family: $primary-font;
+				font-weight: 400;
+				font-size: 20px;
+				line-height: normal;
+			}
+		}
+		&:nth-child(1){
+			.timeline-point-dot{
+					width: 51px;
+					height: 51px;
+					flex: 0 0 51px;
+					max-width: 51px;
+					display: inline-block;
+					margin-right: 78px;
+					position: relative;
+					&:after{
+						content: "";
+						display: inline-block;
+						width: 30px;
+						height: 30px;
+						border-radius: 50%;
+						background-color: $sinopia;
+						position: absolute;
+						top: calc(50% - 15px);
+						left: calc(50% - 15px);
+					}
+					&:before{
+						content: "";
+						display: inline-block;
+						width: 51px;
+						height: 51px;
+						border-radius: 50%;
+						background-color: $white;
+						border: 5px solid $sinopia;
+
+					}
+				}
+			.timeline-year{
+				display: block;
+				color: $sinopia;
+				font-weight: 700;
+				font-size: 70px;
+
+			}
+			.timeline-heading{
+				display: block;
+				color: #333333;
+				font-weight: 700;
+				font-size: 40px;
+			}
+			.timeline-content{
+				display: block;
+			}
+				.timeline-readmore{
+					a{
+						font-family: Arial;
+						font-size: 22px;
+						color: $sinopia;
+						&:after{
+							content: " ";
+							display: block;
+							background-color: $sinopia;
+							width: 100%;
+							height: 1px;
+						}
+					}
+					display: inline-block;
+					position: relative;
+					&:after{
+						content: "";
+						display: block;
+						width: 20px;
+						height: 20px;
+						display: inline-block;
+						background: $sinopia;
+						position: absolute;
+						top: calc(50% - 10px);
+						right: -38px;
+					}
+				}
+
+		}
+	}
+}
