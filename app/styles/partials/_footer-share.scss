@@ -31,6 +31,8 @@
             color: $light-black;
             text-align: center;
             position: relative;
+            z-index: 1;
+            text-shadow: 4px 0 0 #fff, -4px 0 0 #fff, 0 4px 0 #fff, 0 -4px 0 #fff;
 
             &:after,
             &:before {
@@ -43,6 +45,7 @@
                 border-image-slice: 33% 33%;
                 border-image-repeat: round;
                 width: 27.8%;
+                z-index: -1;
             }
 
             &:after {
@@ -60,7 +63,7 @@
 
         .show-support-link {
             display: flex;
-            justify-content: space-between;
+            justify-content: center;
             flex-wrap: wrap;
             @include interpolate("margin-top", 600px, 40px, 1200px, 70px, "ease-in");
             &-button {
@@ -81,9 +84,9 @@
                   margin-right: 10px;
                 }
                 @include interpolate("min-height", 600px, 60px, 1200px, 83px, "ease-in");
-                @include interpolate("line-height", 600px, 60px, 1200px, 83px, "ease-in");
-                flex: 0 0 41.666667%;
-                max-width: 41.666667%;
+                flex: 0 1 auto;
+                max-width: 100%;
+                padding: 30px;
                 // min-height: 83px;
                 // line-height: 83px;
                 text-transform: uppercase;
