@@ -82,5 +82,17 @@
             font-size: 22px;
             line-height: 1.6;
         }
+
+        .banner-quote {
+            font-family: $primary-font;
+            color: $white;
+
+            .quote-text {
+                font-size: 26px;
+            }
+            .quote-author {
+                font-size: 18px;
+            }
+        }
     }
 }
