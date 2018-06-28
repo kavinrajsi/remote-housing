@@ -4,7 +4,6 @@
     position: relative;
     z-index: 1;
     height: 100vh;
-    height: 100vh;
     overflow: hidden;
     display: flex;
     align-items: flex-end;
@@ -54,17 +53,16 @@
     overflow: hidden;
     display: flex;
     justify-content: flex-end;
-    @media (max-width: 576px) {
-        align-items: flex-end;
-    }
     align-items: center;
     background-repeat: no-repeat;
     background-position: top left;
     background-size: cover;
+    padding: 8vw 0px;
+
     @media (max-width: 576px) {
+        align-items: flex-end;
         padding: 0px 0px;
     }
-    padding: 8vw 0px;
 
     .inner-banner-content {
             background-color: rgba(0,0,0,0.60);
