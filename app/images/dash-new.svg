@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 5 49">
+  <defs>
+    <style>
+      .cls-1 {
+        stroke: #5184af;
+      }
+
+      .cls-1, .cls-2, .cls-3 {
+        stroke-linecap: round;
+        stroke-width: 5px;
+        stroke-dasharray: 15 20;
+      }
+
+      .cls-2 {
+        stroke: #fff;
+      }
+
+      .cls-3 {
+        stroke: #d14210;
+      }
+    </style>
+  </defs>
+  <g id="dash-new" transform="translate(-199 -230)">
+    <line id="dash-new-2" data-name="dash-new" class="cls-1" x2="1" transform="translate(201.5 232.5) rotate(90)"/>
+    <line id="dash-new-3" data-name="dash-new" class="cls-2" x2="1" transform="translate(201.5 249.5) rotate(90)"/>
+    <line id="dash-new-4" data-name="dash-new" class="cls-3" x2="5" transform="translate(201.5 271.5) rotate(90)"/>
+    <line id="dash-new-5" data-name="dash-new" class="cls-3" x2="5" transform="translate(201.5 256.5) rotate(90)"/>
+  </g>
+</svg>

@@ -3,39 +3,46 @@
 	padding: 0;
 	margin: 0;
 	position: relative;
+
 	 &:after{
 		content: "";
 		display: block;
 		width: 10px;
 		height: 100%;
 		background-image: url(../images/dash.svg);
+		background-image: url(../images/dash-new.svg);
 		position: absolute;
 		top: 10px;
-		left: 10px;
+		left: 8px;
+		z-index: -5;
+
+
 	 }
 	&-point{
 		position: relative;
 		display: flex;
 		margin-bottom: 35px;
-		/*&:before {*/
-			border-style: dotted;
-			border-color: #d57e00;
-			border-image-source: url(https://cl.ly/3c2J3c0l3r0P/dots.svg);
-			border-image-slice: 33% 33%;
-			border-image-repeat: round;
-			border-width: 0 0 0 13px;
-		/*}*/
 		&:nth-child(n){
 			.timeline-point-dot{
 				border-radius: 50%;
 				background-color: $dot-color;
 				width: 22px;
 				height: 22px;
-				margin-right: 78px;
+				@include interpolate("margin-right", 400px, 18px, 1200px, 78px, "ease-in");
 				flex: 0 0 22px;
 				max-width: 22px;
 			}
+			.timelin-data{
+				display: flex;
+				@media (max-width: $screen-xs-max){
+					flex-direction: column;
+				}
+			}
 			.timeline-year{
+				@media (max-width: $screen-xs-max){
+					margin: 0 0 8px 0;
+					font-size: 16px;
+				}
 				color: #757575;
 				font-family: $primary-font;
 				font-weight: 700;
@@ -44,6 +51,9 @@
 				margin-right: 30px;
 			}
 			.timeline-heading{
+				@media (max-width: $screen-xs-max){
+					font-size: 16px;
+				}
 				color: #757575;
 				font-family: $primary-font;
 				font-weight: 400;
@@ -58,8 +68,9 @@
 					flex: 0 0 51px;
 					max-width: 51px;
 					display: inline-block;
-					margin-right: 78px;
+					@include interpolate("margin-right", 600px, 30px, 1200px, 78px, "ease-in");
 					position: relative;
+					left: -14px;
 					&:after{
 						content: "";
 						display: inline-block;
@@ -82,6 +93,9 @@
 
 					}
 				}
+			.timelin-data{
+				display: block;
+			}
 			.timeline-year{
 				display: block;
 				color: $sinopia;
@@ -93,6 +107,9 @@
 				display: block;
 				color: #333333;
 				font-weight: 700;
+				@media (max-width: $screen-xs-max){
+					font-size: 20px;
+				}
 				font-size: 40px;
 			}
 			.timeline-content{
