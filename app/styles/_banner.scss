@@ -13,7 +13,39 @@
     background-size: cover;
 
     @media (max-width: $screen-sm-max) {
+        background-position: center right 35%;
         padding: 0px 0px 10vh;
+    }
+
+    .banner-quote {
+        font-family: $primary-font;
+        color: $white;
+        margin: 0 0 140px;
+
+        @media (min-width: 768px) {
+            max-width: 50%;
+        }
+
+        .quote-text {
+            border: none;
+            font-size: 26px;
+            padding: 0;
+
+            &::before,
+            &::after {
+                font-size: 30px;
+            }
+
+            &::before {
+                content: open-quote;
+            }
+            &::after {
+                content: close-quote;
+            }
+        }
+        .quote-author {
+            font-size: 18px;
+        }
     }
 
     .intro-banner-content {

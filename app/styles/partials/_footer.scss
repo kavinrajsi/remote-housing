@@ -2,15 +2,7 @@
 .footer {
     position: relative;
     background-color: $dark-blue;
-    background: $dark-blue url(../images/footer-bg.png) no-repeat center;
-    background-blend-mode: overlay;
-    background-size: cover;
     padding-bottom: 70px;
-
-    @media (min-width: 768px) {
-        background-position: top right;
-        background-size: contain;
-    }
 
     @media (min-width: 1024px) {
         padding: 0;
