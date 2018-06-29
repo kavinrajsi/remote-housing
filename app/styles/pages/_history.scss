@@ -3,26 +3,26 @@
 	padding: 0;
 	margin: 0;
 	position: relative;
-
-	 &:after{
-		content: "";
-		display: block;
-		width: 10px;
-		height: 100%;
-		background-image: url(../images/dash.svg);
-		background-image: url(../images/dash-new.svg);
-		position: absolute;
-		top: 10px;
-		left: 8px;
-		z-index: -5;
-
-
-	 }
 	&-point{
 		position: relative;
 		display: flex;
-		margin-bottom: 35px;
+	  padding-bottom: 35px;
 		&:nth-child(n){
+      &:after{
+        content: "";
+        display: block;
+        width: 10px;
+        height: 100%;
+        // background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 5 25'><line id='dash-new' y2='10' stroke-width='3' stroke-linecap='round' stroke='#d14210' stroke-dasharray='60 60' transform='translate(2.5 2.5)'/></svg>");
+        background-image: url(../images/dash-new.svg);
+        background-repeat: repeat-y;
+        // background-repeat: no-repeat;
+        position: absolute;
+        top: 20px;
+        left: 8px;
+        z-index: -5;
+        background-size: 5px;
+       }
 			.timeline-point-dot{
 				border-radius: 50%;
 				background-color: $dot-color;
@@ -30,7 +30,7 @@
 				height: 22px;
 				@include interpolate("margin-right", 400px, 18px, 1200px, 78px, "ease-in");
 				flex: 0 0 22px;
-				max-width: 22px;
+        max-width: 22px;
 			}
 			.timelin-data{
 				display: flex;
@@ -70,7 +70,8 @@
 					display: inline-block;
 					@include interpolate("margin-right", 600px, 30px, 1200px, 78px, "ease-in");
 					position: relative;
-					left: -14px;
+          left: -14px;
+          top: 22px;
 					&:after{
 						content: "";
 						display: inline-block;
@@ -94,13 +95,15 @@
 					}
 				}
 			.timelin-data{
-				display: block;
+        display: block;
+        margin-bottom: 30px;
 			}
 			.timeline-year{
 				display: block;
 				color: $sinopia;
 				font-weight: 700;
-				font-size: 70px;
+        font-size: 70px;
+        margin-bottom: 7px;
 
 			}
 			.timeline-heading{
@@ -108,12 +111,15 @@
 				color: #333333;
 				font-weight: 700;
 				@media (max-width: $screen-xs-max){
-					font-size: 20px;
+          font-size: 20px;
+          margin-bottom: 10px;
 				}
-				font-size: 40px;
+        font-size: 40px;
+        margin-bottom: 20px;
 			}
 			.timeline-content{
-				display: block;
+        display: block;
+        margin-bottom: 41px;
 			}
 				.timeline-readmore{
 					a{
@@ -129,7 +135,23 @@
 						}
 					}
 					display: inline-block;
-					position: relative;
+          position: relative;
+          &:before{
+            content: " ";
+            display: block;
+            width: 10px;
+            height: 10px;
+            display: inline-block;
+            position: absolute;
+            top: calc(50% - 10px);
+            right: -38px;
+            z-index: 1;
+            margin-top: 5px;
+            margin-right: 7px;
+            border-top: 2px solid #fff;
+            border-right: 2px solid #fff;
+            transform: rotate(45deg);
+          }
 					&:after{
 						content: "";
 						display: block;
@@ -139,10 +161,16 @@
 						background: $sinopia;
 						position: absolute;
 						top: calc(50% - 10px);
-						right: -38px;
+            right: -38px;
+            z-index: -1;
 					}
 				}
 
-		}
+    }
+		&:last-child{
+      &:after{
+        content:  none;
+      }
+    }
 	}
 }
