@@ -4,7 +4,7 @@
         padding-left: 0px;
         padding-right: 0px;
         @include interpolate("padding-top", 600px, 40px, 1200px, 106px, "ease-in");
-        @include interpolate("padding-bottom", 600px, 40px, 1200px, 134px, "ease-in");
+        @include interpolate("padding-bottom", 600px, 40px, 1200px, 54px, "ease-in");
         @include interpolate("margin-bottom", 600px, 40px, 1200px, 121px, "ease-in");
         position: relative;
 
@@ -64,49 +64,69 @@
         .show-support-link {
             display: flex;
             justify-content: center;
+            align-items: center;
             flex-wrap: wrap;
-            @include interpolate("margin-top", 600px, 40px, 1200px, 70px, "ease-in");
+
+            @include interpolate("margin-top", 600px, 40px, 1200px, 40px, "ease-in");
+
+            > * {
+                margin: 30px 0;
+            }
+
             &-button {
-                text-align: center;
-                font-family: $primary-font;
-                font-weight: 700;
-                font-size: 30px;
-                color: $light-black;
-                border: 2px solid $light-black;
-                position: relative;
-                display: inline-block;
-                background: #fff;
-                @media (max-width: $screen-xs-max) {
-                  flex: 0 0 calc(100% - 20px);
-                  max-width: calc(100% - 20px);
-                  margin-bottom: 40px;
-                  margin-left: 10px;
-                  margin-right: 10px;
-                }
-                @include interpolate("min-height", 600px, 60px, 1200px, 83px, "ease-in");
-                flex: 0 1 auto;
-                max-width: 100%;
-                padding: 30px;
-                // min-height: 83px;
-                // line-height: 83px;
-                text-transform: uppercase;
+                @include drop-outline-button;
+            }
 
-                &:after {
-                    content: "";
-                    position: absolute;
-                    height: 100%;
-                    width: 100%;
-                    left: 11px;
-                    top: 11px;
-                    z-index: -2;
-                    border: 2px solid $light-black;
-                    transition: all 0.26s ease-out;
+            .addthis_inline_share_toolbox_5mq0 {
+
+                @media (min-width: $screen-sm-min) {
+                    margin-left: 30px;
                 }
 
-                &:hover {
-                    &:after {
-                        background: $sinopia;
-                        transition: all 0.26s ease-in;
+                .at-share-btn-elements {
+                    text-align: center;
+
+                    .at-icon-wrapper {
+                        overflow: visible;
+    
+                        .at-icon-wrapper,
+                        .at-label {
+                            display: none;
+                        }
+    
+                        &.at-share-btn {
+                            @include drop-outline-button;
+                            
+                            background: $white !important;
+                            margin: 15px 0;
+                            transform: none !important;
+    
+                            &:not(:last-child) {
+                                @media (min-width: 500px) {
+                                    margin-right: 30px;
+                                }
+                            }
+    
+                            &.at-svc-facebook {
+                                &:hover::after {
+                                    background: #3d5b98;
+                                }
+                            }
+    
+                            &.at-svc-twitter {
+                                &:hover::after {
+                                    background: #20a1f2;
+                                }
+                            }
+                        }
+    
+                        .at4-visually-hidden {
+                            position: static;
+                            clip: unset;
+                            overflow: visible;
+                        }
+    
+                        
                     }
                 }
             }

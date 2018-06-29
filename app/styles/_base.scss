@@ -65,3 +65,40 @@ ul {
     margin: 40px 0 0;
     padding: 20px 0 0;
 }
+
+@mixin drop-outline-button {
+    text-align: center;
+    font-family: $primary-font;
+    font-weight: 700;
+    font-size: 24px;
+    color: $light-black;
+    border: 2px solid $light-black;
+    position: relative;
+    display: inline-block;
+    background: #fff;
+    padding: 30px;
+    text-transform: uppercase;
+    line-height: 26px;
+    margin: 0;
+
+    @include interpolate("min-height", 600px, 60px, 1200px, 83px, "ease-in");
+    
+    &:after {
+        content: "";
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        left: 11px;
+        top: 11px;
+        z-index: -2;
+        border: 2px solid $light-black;
+        transition: all 0.26s ease-out;
+    }
+
+    &:hover {
+        &:after {
+            background: $sinopia;
+            transition: all 0.26s ease-in;
+        }
+    }
+}
