@@ -20,7 +20,7 @@
     .banner-quote {
         font-family: $primary-font;
         color: $white;
-        margin: 0 0 140px;
+        margin: 0 0 60px;
 
         @media (min-width: 768px) {
             max-width: 50%;
@@ -29,6 +29,9 @@
         .quote-text {
             border: none;
             font-size: 26px;
+            font-weight: 700;
+            line-height: 1.2;
+            margin: 0 0 10px;
             padding: 0;
 
             &::before,
