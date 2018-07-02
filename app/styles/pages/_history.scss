@@ -1,176 +1,177 @@
-.timeline{
+.timeline {
 	list-style: none;
 	padding: 0;
 	margin: 0;
-	position: relative;
-	&-point{
-		position: relative;
-		display: flex;
-	  padding-bottom: 35px;
-		&:nth-child(n){
-      &:after{
-        content: "";
-        display: block;
-        width: 10px;
-        height: 100%;
-        // background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 5 25'><line id='dash-new' y2='10' stroke-width='3' stroke-linecap='round' stroke='#d14210' stroke-dasharray='60 60' transform='translate(2.5 2.5)'/></svg>");
-        background-image: url(../images/dash-new.svg);
+    position: relative;
+    
+	&-point {
+        background-image: url(../images/dash.svg);
+        background-position: 28px -6px;
         background-repeat: repeat-y;
-        // background-repeat: no-repeat;
-        position: absolute;
-        top: 20px;
-        left: 8px;
-        z-index: -5;
         background-size: 5px;
-       }
-			.timeline-point-dot{
-				border-radius: 50%;
-				background-color: $dot-color;
-				width: 22px;
-				height: 22px;
-				@include interpolate("margin-right", 400px, 18px, 1200px, 78px, "ease-in");
-				flex: 0 0 22px;
-        max-width: 22px;
-			}
-			.timelin-data{
-				display: flex;
-				@media (max-width: $screen-xs-max){
-					flex-direction: column;
-				}
-			}
-			.timeline-year{
-				@media (max-width: $screen-xs-max){
-					margin: 0 0 8px 0;
-					font-size: 16px;
-				}
-				color: #757575;
-				font-family: $primary-font;
-				font-weight: 700;
-				font-size: 20px;
-				line-height: normal;
-				margin-right: 30px;
-			}
-			.timeline-heading{
-				@media (max-width: $screen-xs-max){
-					font-size: 16px;
-				}
-				color: #757575;
-				font-family: $primary-font;
-				font-weight: 400;
-				font-size: 20px;
-				line-height: normal;
-			}
-		}
-		&:nth-child(1){
-			.timeline-point-dot{
-					width: 51px;
-					height: 51px;
-					flex: 0 0 51px;
-					max-width: 51px;
-					display: inline-block;
-					@include interpolate("margin-right", 600px, 30px, 1200px, 78px, "ease-in");
-					position: relative;
-          left: -14px;
-          top: 22px;
-					&:after{
-						content: "";
-						display: inline-block;
-						width: 30px;
-						height: 30px;
-						border-radius: 50%;
-						background-color: $sinopia;
-						position: absolute;
-						top: calc(50% - 15px);
-						left: calc(50% - 15px);
-					}
-					&:before{
-						content: "";
-						display: inline-block;
-						width: 51px;
-						height: 51px;
-						border-radius: 50%;
-						background-color: $white;
-						border: 5px solid $sinopia;
+        cursor: pointer;
+        position: relative;
+        padding: 0 0 30px 240px;
 
-					}
-				}
-			.timelin-data{
-        display: block;
-        margin-bottom: 30px;
-			}
-			.timeline-year{
-				display: block;
-				color: $sinopia;
-				font-weight: 700;
-        font-size: 70px;
-        margin-bottom: 7px;
-
-			}
-			.timeline-heading{
-				display: block;
-				color: #333333;
-				font-weight: 700;
-				@media (max-width: $screen-xs-max){
-          font-size: 20px;
-          margin-bottom: 10px;
-				}
-        font-size: 40px;
-        margin-bottom: 20px;
-			}
-			.timeline-content{
-        display: block;
-        margin-bottom: 41px;
-			}
-				.timeline-readmore{
-					a{
-						font-family: Arial;
-						font-size: 22px;
-						color: $sinopia;
-						&:after{
-							content: " ";
-							display: block;
-							background-color: $sinopia;
-							width: 100%;
-							height: 1px;
-						}
-					}
-					display: inline-block;
-          position: relative;
-          &:before{
-            content: " ";
-            display: block;
-            width: 10px;
-            height: 10px;
-            display: inline-block;
+        &::before {
+            background: #d0d0d0;
+            border: 5px solid #fff;
+            border-radius: 50%;
+            box-sizing: border-box;
+            content: '';
+            height: 30px;
+            left: 16px;
             position: absolute;
-            top: calc(50% - 10px);
-            right: -38px;
-            z-index: 1;
-            margin-top: 5px;
-            margin-right: 7px;
-            border-top: 2px solid #fff;
-            border-right: 2px solid #fff;
-            transform: rotate(45deg);
-          }
-					&:after{
-						content: "";
-						display: block;
-						width: 20px;
-						height: 20px;
-						display: inline-block;
-						background: $sinopia;
-						position: absolute;
-						top: calc(50% - 10px);
-            right: -38px;
-            z-index: -1;
-					}
-				}
+            top: 0;
+            transition: all .4s ease;
+            width: 30px;
+        }
 
-    }
-		&:last-child{
-      &:after{
-        content:  none;
-      }
-    }
+        &::after {
+            background: $sinopia;
+            border-radius: 50%;
+            content: '';
+            height: 30px;
+            left: 15px;
+            opacity: 0;
+            position: absolute;
+            top: 0;
+            transition: all .4s ease;
+            width: 30px;
+        }
+
+        .timeline-year {
+            display: inline-block;
+            color: #757575;
+            font-family: $primary-font;
+            font-weight: 700;
+            font-size: 20px;
+            left: 120px;
+            line-height: 1;
+            margin-right: 30px;
+            position: absolute;
+            top: 7px;
+            transition: color .4s ease, margin .4s ease, font-size .4s ease;
+
+            @media (max-width: $screen-xs-max) {
+                margin: 0 0 8px 0;
+                font-size: 16px;
+            }
+
+            &::after {
+                background: transparent;
+                bottom: 0;
+                content: '';
+                height: 1px;
+                left: 0;
+                position: absolute;
+                transition: background-color .4s ease;
+                width: 100%;
+            }
+        }
+
+        .timeline-content {
+            max-height: 34px;
+            overflow: hidden;
+            transition: max-height .4s ease;
+
+            p {
+                color: #757575;
+                margin: 0 0 20px;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                transition: color .4s ease;
+                white-space: nowrap;
+            }
+
+            .timeline-readmore {
+                color: $sinopia;
+                display: none;
+
+                &::after {
+                    background: $sinopia url('../images/arrow.svg') center no-repeat;
+                    background-size: 6px 10px;
+                    content: '';
+                    display: inline-block;
+                    height: 20px;
+                    margin: 0 0 0 10px;
+                    position: relative;
+                    top: 3px;
+                    width: 20px;
+                }
+
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+
+        &:hover {
+
+            &::before {
+                background: $sinopia;
+            }
+
+            .timeline-year {
+                color: $sinopia;
+
+                &::after {
+                    background: $sinopia;
+                }
+            }
+            
+            .timeline-content {
+                p {
+                    color: #4c4c4c;
+                }
+            }
+
+
+        }
+
+        &.active {
+            padding: 0 0 40px 120px;
+
+            &::before {
+                background-color: #fff;
+                border-color: $sinopia;
+                height: 60px;
+                left: 0;
+                top: 10px;
+                width: 60px;
+            }
+
+            &::after {
+                left: 15px;
+                opacity: 1;
+                top: 25px;
+            }
+
+            .timeline-year {
+                color: $sinopia;
+                margin: 0 0 40px;
+                left: 0;
+                position: relative;
+
+                @include interpolate('font-size', 768px, 40px, 1200px, 70px, 'ease-in-out');
+
+                &::after {
+                    display: none;
+                }
+            }
+            .timeline-content {
+                max-height: 100em;
+
+                p {
+                    color: #4c4c4c;
+                    overflow: visible;
+                    white-space: normal;
+                }
+
+                .timeline-readmore {
+        
+                }
+            }
+        }
 	}
 }
